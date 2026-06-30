@@ -1,66 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+
 <meta charset="UTF-8">
+
 <title>Telegram Overlay</title>
 
-<style>
-body{
-    margin:0;
-    background:#181818;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    color:white;
-    font-family:Arial;
-}
+<link rel="stylesheet" href="style.css">
 
-.card{
-    width:900px;
-    height:500px;
-    border-radius:25px;
-    background:#2b2d31;
-    display:flex;
-    overflow:hidden;
-}
-
-.telegram{
-    width:55%;
-    background:#202225;
-    padding:20px;
-}
-
-.qr{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:40px;
-}
-</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 </head>
 
 <body>
 
-<div class="card">
+<div id="overlay">
 
-<div class="telegram">
+<div id="telegram">
 
-<h2>Telegram</h2>
+<div class="header">
+📢 Telegram
+</div>
 
-<p>Здесь скоро будет пост.</p>
+<div id="post">
+
+<h2>Ожидание команды...</h2>
+
+<p>
+После подключения Chatterino здесь будет отображаться пост Telegram.
+</p>
 
 </div>
 
-<div class="qr">
+</div>
 
-QR
+<div id="qrPanel">
 
+<div id="qr"></div>
+
+<div id="channel">
+@telegram
 </div>
 
 </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
